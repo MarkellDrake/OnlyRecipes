@@ -4,7 +4,7 @@ const commentRoutes = require('./commentRoutes');
 const ingredientRoutes = require('./ingredientRoutes');
 const userRoutes = require('./userRoutes');
 
-// router.use('/recipe', recipeRoutes);
+router.use('/recipe', recipeRoutes);
 router.use('/comment', commentRoutes);
 // router.use('/ingredients', ingredientRoutes);
 router.use('/users', userRoutes);
