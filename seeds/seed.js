@@ -12,11 +12,11 @@ const seedAll = async () => {
   await seedUsers();
   console.log('Users Seeded!');
 
-  await seedComments();
-  console.log('Comments Seeded!');
-
   await seedRecipes();
   console.log('Recipes Seeded!');
+  
+  await seedComments();
+  console.log('Comments Seeded!');
 
   await seedIngredients();
   console.log('Ingredients Seeded!');
