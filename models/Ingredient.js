@@ -22,9 +22,10 @@ Ingredient.init(
         amount: {
             type: DataTypes.DECIMAL,
             allowNull: false,
+            defaultValue: 1,
         },
         recipe_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'recipe',
                 key: 'id',
