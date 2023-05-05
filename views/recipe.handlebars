@@ -1,0 +1,36 @@
+<section>
+    <h3 class="recipe-name">{{recipe.name}}</h3>
+    <section class="flex-row justify-center">
+
+        <section class="card" id="recipe">
+            <header>{{recipe.name}}</header>
+            <div class="card-body" id="author">
+                <p>By: {{user.name}}</p>
+            </div>
+        </section>
+
+        <section class="card" id="recipe-instructions">
+            <header>Instructions</header>
+            <div class="card-body" id="instructions">
+                <p>{{recipe.instructions}}</p>
+            </div>
+        </section>
+
+        <section class="card" id="ingredient">
+            <header>Ingredient</header>
+            <div class="card-body" id="ingredients-list">
+                <p>{{ingredient}}</p>
+            </div>
+        </section>
+    </section>
+
+    <section class="flex-row justify-center">
+        <section class="card" id="comment-section">
+            <header>Comment Section</header>
+            <div class="card-body" id="comments">
+                <p>{{comment.name}} {{comment.comment}}</p>
+            </div>
+        </section>
+    </section>
+</section>
+
