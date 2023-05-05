@@ -13,46 +13,37 @@
 <body>
     <header class="display-flex justify-space-between align-center p-2">
         <h1>
-            &#127881 Your random recipe! &#127881
+            &#127881  Only Recipe's   &#127881
         </h1>
-        <!-- picture of the recipe of the week -->
+  <!-- picture of the recipe of the week -->
     </header>
+     <h2> Your Random Recipe !!</h2>
     <nav>
         <a href="/">Home</a>
-        {{#if logged}}
-        <button id="logout" class="btn-no-style">logout</button>
+        {{#if loggedIn}}
+         <button id="MyProfile" class="btn-no-style">My Profile</button>
+        <button id="Logout" class="btn-no-style">logout</button>
         {{else}}
+       <a href="/profile">My Profile</a>
         <a href="/login">Login</a>
         {{/if}}
+        
         <!-- searchbar maybe ?!? -->
     </nav>
     <main>
         <aside>
-             <h2> Types of recipies! </h2>
-              <!-- somehow implement different types of recipes probably cats. -->
+             <h2> Available Recipes! </h2>
+              <!-- Implement Title of each  available Recipe to 10  -->
+          
         </aside>
       {{{body}}}
 
     </main>
-    <footer>
-        
-    </footer>
+    {{#if loggedIn}}
+    <script src="/public/js/logout.js"> </script>
+    {{/if}}
+  
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </html>
