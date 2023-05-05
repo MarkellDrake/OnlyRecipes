@@ -1,3 +1,4 @@
-{{#each recipes as |recipe|}}
-{{> recipe-details}}
+{{#each recipes as |recipe| }}
+<a href="/recipe/{{recipe.id}}">{{ recipe.name}}</a>
 {{/each}}
+
