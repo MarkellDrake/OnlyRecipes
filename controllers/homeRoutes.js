@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
                 },
                 {
                     model: Comment,
+                    attributes: ['id'],
                 },
             ]
         });
@@ -25,7 +26,6 @@ router.get('/', async (req, res) => {
             recipes
         });
     } catch (err) {
-        console.log(err);
         res.status(500).json(err);
     }
 });
@@ -44,7 +44,7 @@ router.get('/recipe/:id', async (req, res) => {
                 },
                 {
                     model: Comment,
-                    include: ['id', 'name', 'comment'],
+                    attributes: ['id', 'name', 'comment'],
                 },
             ]
         });
