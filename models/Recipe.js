@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const Ingredient = require('./Ingredient.js');
 
 class Recipe extends Model {}
 
@@ -35,5 +36,6 @@ Recipe.init(
         modelName: 'recipe',
     }
 );
+
 
 module.exports = Recipe;
