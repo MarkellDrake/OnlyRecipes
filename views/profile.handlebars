@@ -1,28 +1,13 @@
 <section>
-<a href="/public/js/profile.js"></a>
-<h3>Username </h3>
-<!-- profile piture/avatar -->
-</section>
-<section>
-
-<h2> Get To Know The Chief</h2>
-
-<p> <!-- User bio --> </p>
-
+<a href="/js/profile.js"></a>
+<h3>{{user.name}}</h3>
+<!-- profile picture/avatar -->
 </section>
 
-<section>
-    <ul>
-        <li></li>
-        <!--list of different recipes that have been uploaded -->
-        <li></li>
-    </ul>
-</section>
+<h2>Recipes You Have Uploaded</h2>
 
 <section>
-    <ul>
-        <li></li>
-        <!-- saved section for recipes -->
-        <li></li>
-    </ul>
+    {{#each user.recipes as |recipe| }}
+    <a href="/recipe/{{recipe.id}}">{{ recipe.name}}</a>
+    {{/each}}
 </section>
