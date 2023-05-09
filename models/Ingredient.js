@@ -17,7 +17,6 @@ Ingredient.init(
         },
         measurement_type: {
             type: DataTypes.STRING,
-            allowNull: false,
         },
         amount: {
             type: DataTypes.DECIMAL,

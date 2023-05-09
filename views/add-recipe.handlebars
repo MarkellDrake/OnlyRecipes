@@ -1,0 +1,29 @@
+<form class="form">
+      <div class="form-group">
+        <label for="recipe-name">Recipe Name:</label>
+        <input class="form-input" type="text" id="recipe-name" name="recipe-name" />
+      </div>
+      <div class="form-group">
+        <label for="recipe-ingredient">Ingredients:</label>
+        <div class="ingredients">
+            <div class="ingredient">
+                <label for="recipe-ingredient-name">Ingredient Name:</label>
+                <input class="form-input" type="text" id="recipe-ingredient-name" name="recipe-ingredient-name"/>
+                <label for="recipe-ingredient-unit">Ingredient Unit of Measurement:</label>
+                <input class="form-input" type="text" id="recipe-ingredient-unit" name="recipe-ingredient-unit"/>
+                <label for="recipe-ingredient-amount">Ingredient Amount:</label>
+                <input class="form-input" type="text" id="recipe-ingredient-amount" name="recipe-ingredient-amount"/>
+                <button class="remove-ingredient" type="button">Remove</button>
+            </div>
+        </div>
+        <button class="add-ingredient" type="button">Add Ingredient</button>
+      </div>
+      <div class="form-group">
+        <label for="recipe-instructions">Instructions:</label>
+        <textarea class="form-input" id="recipe-instructions" name="recipe-instructions"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="submit-btn btn btn-primary">Submit Recipe</button>
+      </div>
+</form>
+<script src="/js/add-recipe.js"></script>
