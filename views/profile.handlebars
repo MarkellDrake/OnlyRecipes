@@ -1,13 +1,13 @@
-<section>
+<section  class="nameSpace">
 <a href="/js/profile.js"></a>
-<h3>{{user.name}}</h3>
+    <h3 class="profileName">{{user.name}}</h3>
 <!-- profile picture/avatar -->
 </section>
-
-<h2>Recipes You Have Uploaded</h2>
-
+<div class="recipeUpSpace">
+    <h2 class="recipeUp">Recipes You Have Uploaded:</h2>
+</div>
 <section>
     {{#each user.recipes as |recipe| }}
-    <a href="/recipe/{{recipe.id}}">{{ recipe.name}}</a>
+    <a class="profileRec" href="/recipe/{{recipe.id}}">{{ recipe.name}}</a>
     {{/each}}
 </section>

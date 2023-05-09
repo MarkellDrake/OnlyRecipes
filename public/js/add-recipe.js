@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <input class="input" type="text" id="recipe-ingredient-unit" name="recipe-ingredient-unit"/>
         <label class="label" for="recipe-ingredient-amount">Ingredient Amount:</label>
         <input class="input" type="text" id="recipe-ingredient-amount" name="recipe-ingredient-amount"/>
-        <button class="remove-ingredient button" type="button">Remove Ingredient</button>
+        <button class="remove-ingredient button   is-danger" type="button">Remove Ingredient</button>
         `;
         ingredientsContaier.appendChild(newIngredient);
     });
