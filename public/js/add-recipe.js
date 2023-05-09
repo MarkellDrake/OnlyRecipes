@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             body: dataString,
         })
-        .then(res => res.json())
+        .then(()=>{
+            window.location.href="/"
+        })
         .then(data => console.log(data))
         .catch(error => console.error(error));
     });

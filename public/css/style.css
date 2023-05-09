@@ -2,9 +2,13 @@
     --forestGreen: rgb(87, 140, 7);
 }
 h1{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     display:flex;
     justify-content: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 400%;
+    
+    
 }
 nav {
     background-color: var(--forestGreen );
@@ -63,4 +67,10 @@ h3{
 .signup{
     background-color: beige;
     padding:10px;
+}
+
+@media screen and (max-width: 400px){
+    h1{
+        font-size:300%;
+    }
 }
