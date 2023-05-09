@@ -1,34 +1,40 @@
 <section>
-    <h3 class="recipe-name">{{recipe.name}}</h3>
+    <h2 class="recipe-name">{{recipe.name}}</h2>
     <section class="flex-row justify-center">
-
         <section class="card" id="recipe">
-            <header>{{recipe.name}}</header>
+            {{!-- <header>{{recipe.name}}</header> --}}
             <div class="card-body" id="author">
-                <p>By: {{user.name}}</p>
+                <p>By: {{recipe.user.name}}</p>
             </div>
         </section>
-
-        <section class="card" id="recipe-instructions">
-            <header>Instructions</header>
-            <div class="card-body" id="instructions">
-                <p>{{recipe.instructions}}</p>
-            </div>
-        </section>
-
-        <section class="card" id="ingredient">
-            <header>Ingredient</header>
+        
+         <section class="card" id="ingredient">
+            <h3>Ingredients :</h3>
             <div class="card-body" id="ingredients-list">
-                <p>{{ingredient}}</p>
+               {{#each recipe.ingredients as |ingredient| }}  
+               <h4>{{ingredient.name}}</h4> 
+               <p> {{ingredient.amount}} {{ingredient.measurement_type}}</p>
+               {{/each}}
             </div>
         </section>
+     </section>
+
+    <section class="card" id="recipe-instructions">
+        <h3>Instructions</h3>
+        <div class="card-body" id="instructions">
+            <p>{{recipe.instructions}}</p>
+        </div>
     </section>
 
     <section class="flex-row justify-center">
         <section class="card" id="comment-section">
-            <header>Comment Section</header>
+            <h3>Comments : </h3>
             <div class="card-body" id="comments">
-                <p>{{comment.name}} {{comment.comment}}</p>
+                   {{#each recipe.comments as |comment| }}  
+                 {{!-- make user name in italics and lighter font --}}
+               <h4>{{comment.name}} <span> by: {{comment.user.name}}</span></h4> 
+               <p> {{comment.comment}}</p>
+               {{/each}}
             </div>
         </section>
     </section>
