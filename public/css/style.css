@@ -13,9 +13,34 @@ h1{
 nav {
     background-color: var(--forestGreen );
     margin-left: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     
     
+    
+}
+.profileName{
+    margin-left: 10px;
+    padding-top: 0;
+    font-weight: bold;
+    font-size: 200%;
+    height: auto;
+   
+}
+.nameSpace{
+   height: 80%;
+    background-color: beige;
+}
+.recipeUpSpace{
+    background-color: var(--forestGreen);
+
+}
+
+.recipeUp{
+    margin-left: 10px;
+   color: white;
+}
+.profileRec{
+    font-size: 150%;
 }
 nav a{
     color: white;
