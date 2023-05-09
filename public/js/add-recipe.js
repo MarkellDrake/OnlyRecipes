@@ -49,19 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const newIngredient = document.createElement('div');
         newIngredient.classList.add('ingredient');
         newIngredient.innerHTML = `
-        <label for="recipe-ingredient-name">Ingredient Name:</label>
-        <input class="form-input" type="text" id="recipe-ingredient-name" name="recipe-ingredient-name"/>
-        <label for="recipe-ingredient-unit">Ingredient Unit of Measurement:</label>
-        <input class="form-input" type="text" id="recipe-ingredient-unit" name="recipe-ingredient-unit"/>
-        <label for="recipe-ingredient-amount">Ingredient Amount:</label>
-        <input class="form-input" type="text" id="recipe-ingredient-amount" name="recipe-ingredient-amount"/>
-        <button class="remove-ingredient" type="button">Remove</button>
+        <label class="label" for="recipe-ingredient-name">Ingredient Name:</label>
+        <input class="input" type="text" id="recipe-ingredient-name" name="recipe-ingredient-name"/>
+        <label class="label" for="recipe-ingredient-unit">Ingredient Unit of Measurement:</label>
+        <input class="input" type="text" id="recipe-ingredient-unit" name="recipe-ingredient-unit"/>
+        <label class="label" for="recipe-ingredient-amount">Ingredient Amount:</label>
+        <input class="input" type="text" id="recipe-ingredient-amount" name="recipe-ingredient-amount"/>
+        <button class="remove-ingredient button" type="button">Remove Ingredient</button>
         `;
         ingredientsContaier.appendChild(newIngredient);
     });
 
     ingredientsContaier.addEventListener('click', (e) => {
-        if (e.target.className === 'remove-ingredient') {
+        if (e.target.classList.contains('remove-ingredient')) {
             const ingredientToRemove = e.target.parentNode;
             ingredientToRemove.remove();
         }

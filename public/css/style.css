@@ -5,3 +5,15 @@
 h3{
     padding-left: 6px;
 }
+
+.add-recipe-card {
+    margin: 10px;
+}
+
+.add-ingredient {
+    margin-top: 5px;
+}
+
+.remove-ingredient {
+    margin-top: 5px;
+}
