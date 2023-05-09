@@ -93,7 +93,9 @@ router.get('/profile/', withAuth, async (req, res) => {
 });
 
 router.get('/add-recipe', withAuth, (req, res) => {
-    res.render('add-recipe')
+    res.render('add-recipe', {
+        logged_in: true
+    });
 });
 
 router.get('/login', (req, res) => {
