@@ -19,10 +19,10 @@
     </header>
     <nav>
         <a href="/">Home</a>
-        {{#if loggedIn}}
+        {{#if logged_in}}
         <a href="/profile">My Profile</a>
         <a href="/add-recipe">Add a Recipe</a>
-        <button id="Logout" class="btn-no-style">Logout</button>
+        <button id="logout" class="btn-no-style">Logout</button>
         {{else}}
         <a href="/login">Login/Sign Up</a>
         {{/if}}
@@ -31,7 +31,7 @@
     <main>
       {{{body}}}
     </main>
-    {{#if loggedIn}}
+    {{#if logged_in}}
     <script src="/js/logout.js"> </script>
     {{/if}} 
 </body>
