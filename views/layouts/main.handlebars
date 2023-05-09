@@ -12,21 +12,27 @@
 
 
 <body>
-    <header class="display-flex justify-space-between align-center p-2">
-        <h1 class="is-primary">
-            &#127881  OnlyRecipes   &#127881
+    <header class="">
+        <h1 class="is-primary" >
+              Only Recipes   
         </h1>
     </header>
-    <nav>
-        <a href="/">Home</a>
+    <nav class="columns">
+        <div class="column is-one-fifth ">
+            <a href="/">Home</a>
+        </div>
         {{#if logged_in}}
-        <a href="/profile">My Profile</a>
-        <a href="/add-recipe">Add a Recipe</a>
-        <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-        <a href="/login">Login/Sign Up</a>
-        {{/if}}
+        <div class="column is-5 is-offset-6" >
+            <a href="/profile">My Profile</a>
+            <a href="/add-recipe">Add a Recipe</a>
+            <a href="/" id="logout" >Logout</a>
+            {{else}}
+        <div class="column is-5 is-offset-8">
+            <a  href="/login">Login/Sign Up</a>
+         </div>
+            {{/if}}
         <!-- searchbar maybe ?!? -->
+        </div>
     </nav>
     <main>
       {{{body}}}

@@ -1,6 +1,8 @@
 <h2>Check out these user submitted recipies!</h2>
 
 {{#each recipes as |recipe|}}
-<a href="/recipe/{{recipe.id}}">{{recipe.name}}</a>
+<a class="recipeName" href="/recipe/{{recipe.id}}">{{recipe.name}}</a>
+<p class="user"> by: {{recipe.user.name}}</p>
 {{/each}}
+
 
