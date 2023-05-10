@@ -3,33 +3,27 @@
     <div class="subtitle is-6" id="author">
                 <p>By: {{recipe.user.name}}</p>
             </div>
-    <section class="flex-row justify-center">
-        {{!-- <section class="card" id="recipe">
-            {{!-- <header>{{recipe.name}}</header> --}}
-            {{!-- <div class="card-body subtitle is-4" id="author">
-                <p>By: {{recipe.user.name}}</p>
-            </div>
-        </section> --}}
-        
-         <section class="card" id="ingredient">
-            <h3>Ingredients :</h3>
-            <div class="card-body" id="ingredients-list">
+  
+    <div class="columns is-vcentered recipePage">
+         <section class="ingredients column is-4 " id="ingredient">
+            <div class="ingredientName  bd-notification is-primary" id="ingredients-list">
+                <h3>Ingredients :</h3>
                {{#each recipe.ingredients as |ingredient| }}  
                <h4>{{ingredient.name}}</h4> 
                <p> {{ingredient.amount}} {{ingredient.measurement_type}}</p>
                {{/each}}
             </div>
         </section>
-     </section>
-<section class="flex-row justify-center">
-    <section class="card" id="recipe-instructions">
+    <section class=" column ">
+    <section class="bd-notification is-primary" id="recipe-instructions">
         <h3>Instructions</h3>
         <div class="card-body" id="instructions">
             <p>{{recipe.instructions}}</p>
         </div>
     </section>
-</section>
-    <section class="flex-row justify-center">
+    </section>
+    </div>
+    <section class=" ">
         <section class="card" id="comment-section">
             <h3>Comments : </h3>
             <div class="card-body" id="comments">
@@ -42,4 +36,5 @@
         </section>
     </section>
 </section>
+
 
