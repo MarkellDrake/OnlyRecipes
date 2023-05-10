@@ -78,6 +78,19 @@ h3{
 .remove-ingredient {
     margin-top: 5px;
 }
+.ingredients{
+    background-color: var(--forestGreen);
+    margin: 15px;
+    width: fit-content;
+}
+.ingredientName{
+    color: white;
+}
+.recipePage{
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
 
 
 
